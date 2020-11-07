@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             bottomNavigationView.setSelectedItemId(R.id.home);
             flag++;
         }else if(flag == 1){
-            Toast.makeText(this, "Press twice to Exit", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Press Again to Exit", Toast.LENGTH_SHORT).show();
         }else{
             System.exit(0);
         }
