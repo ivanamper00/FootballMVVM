@@ -4,10 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 
 import android.os.Bundle;
-import android.view.View;
-import android.view.WindowManager;
-import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.billy.footballmvvm.R;
@@ -74,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             bottomNavigationView.setSelectedItemId(R.id.home);
             flag++;
         }else if(flag == 1){
-            Toast.makeText(this, "Press again to Exit", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Press twice to Exit", Toast.LENGTH_SHORT).show();
         }else{
             System.exit(0);
         }
