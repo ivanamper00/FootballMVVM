@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".views.fragments.AboutFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <com.synnapps.carouselview.CarouselView
+                android:id="@+id/carouselView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:fillColor="#00FFFFFF"
+                app:pageColor="#00000000"
+                app:radius="0dp"
+                app:slideInterval="3000"
+                app:strokeColor="#00777777"
+                app:strokeWidth="0dp"/>
+            <androidx.cardview.widget.CardView
+                android:id="@+id/titleLayout"
+                android:layout_width="match_parent"
+                app:cardBackgroundColor="@color/colorWhite"
+                android:layout_height="wrap_content">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/league_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:fontFamily="@font/lato_regular"
+                        android:padding="10dp"
+                        android:layout_marginTop="5dp"
+                        android:text="German Bundesliga"
+                        android:textColor="@color/colorOrange"
+                        android:textSize="20sp"
+                        android:textStyle="bold|italic" />
+
+                    <ImageView
+                        android:id="@+id/website_link"
+                        android:src="@drawable/website"
+                        android:padding="10dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_alignParentEnd="true"
+                        app:tint="@color/colorLightBlue" />
+
+                    <ImageView
+                        android:id="@+id/youtube_link"
+                        android:padding="10dp"
+                        android:src="@drawable/youtube_brands"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_toLeftOf="@+id/website_link"
+                        app:tint="@color/colorRed"/>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/about_tab_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:tabIndicatorColor="@color/colorBlack"
+                    app:tabSelectedTextColor="@color/colorBlack"
+                    app:tabTextColor="@color/colorOrange"
+                    android:background="@color/colorWhite"/>
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/about_view_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior" />
+            </LinearLayout>
+        </LinearLayout>
+
+</FrameLayout>
